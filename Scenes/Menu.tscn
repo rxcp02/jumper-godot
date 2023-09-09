@@ -1,0 +1,117 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scenes/Terrain.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Resources/Fonts/NokiaCellphoneFC.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scripts/Menu.gd" type="Script" id=3]
+[ext_resource path="res://Resources/Audio/background.wav" type="AudioStream" id=4]
+
+[sub_resource type="DynamicFont" id=4]
+size = 12
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = 2
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+outline_size = 10
+outline_color = Color( 0.0117647, 0.219608, 0.0392157, 1 )
+extra_spacing_char = 2
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = 2
+font_data = ExtResource( 2 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 34, 18 )
+
+[node name="Menu" type="CenterContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource( 3 )
+
+[node name="Background" type="Control" parent="."]
+margin_left = 288.0
+margin_top = 144.0
+margin_right = 288.0
+margin_bottom = 144.0
+
+[node name="Terrain" parent="Background" instance=ExtResource( 1 )]
+position = Vector2( -288, -144 )
+tile_data = PoolIntArray( 65533, 17, 196623, 65534, 17, 262145, 65535, 17, 262145, 0, 17, 196620, 1, 17, 262145, 2, 17, 262145, 3, 17, 262145, 4, 17, 262145, 5, 17, 262145, 6, 17, 262145, 7, 17, 262145, 8, 17, 262145, 9, 17, 262145, 10, 17, 262145, 11, 17, 262145, 12, 17, 262145, 13, 17, 262145, 14, 17, 262145, 15, 17, 262145, 16, 17, 262145, 17, 17, 196620, 18, 17, 262145, 19, 17, 262145, 20, 17, 196624, 131069, 17, 65540, 131070, 16, 0, 131071, 16, 2, 65536, 17, 65540, 65537, 16, 0, 65538, 16, 1, 65539, 16, 1, 65540, 16, 1, 65541, 16, 1, 65542, 16, 1, 65543, 16, 1, 65544, 16, 1, 65545, 16, 1, 65546, 16, 1, 65547, 16, 1, 65548, 16, 1, 65549, 16, 1, 65550, 16, 1, 65551, 16, 1, 65552, 16, 2, 65553, 17, 65540, 65554, 16, 0, 65555, 16, 2, 65556, 17, 65540, 196605, 17, 65540, 196606, 16, 65536, 196607, 16, 65538, 131072, 17, 65540, 131073, 16, 65536, 131074, 16, 65537, 131075, 16, 65537, 131076, 16, 65537, 131077, 16, 65537, 131078, 16, 65537, 131079, 16, 65537, 131080, 16, 65537, 131081, 16, 65537, 131082, 16, 65537, 131083, 16, 65537, 131084, 16, 65537, 131085, 16, 65537, 131086, 16, 65537, 131087, 16, 65537, 131088, 16, 65538, 131089, 17, 65540, 131090, 16, 65536, 131091, 16, 65538, 131092, 17, 65540, 262141, 17, 65540, 262142, 16, 65536, 262143, 16, 65538, 196608, 17, 65540, 196609, 16, 65536, 196610, 16, 65537, 196611, 16, 65537, 196612, 16, 65537, 196613, 16, 65537, 196614, 16, 65537, 196615, 16, 65537, 196616, 16, 65537, 196617, 16, 65537, 196618, 16, 65537, 196619, 16, 65537, 196620, 16, 65537, 196621, 16, 65537, 196622, 16, 65537, 196623, 16, 65537, 196624, 16, 65538, 196625, 17, 65540, 196626, 16, 65536, 196627, 16, 65538, 196628, 17, 65540, 327677, 17, 65540, 327678, 16, 65536, 327679, 16, 65538, 262144, 17, 65540, 262145, 16, 65536, 262146, 16, 65537, 262147, 16, 65537, 262148, 16, 65537, 262149, 16, 65537, 262150, 16, 65537, 262151, 16, 65537, 262152, 16, 65537, 262153, 16, 65537, 262154, 16, 65537, 262155, 16, 65537, 262156, 16, 65537, 262157, 16, 65537, 262158, 16, 65537, 262159, 16, 65537, 262160, 16, 65538, 262161, 17, 65540, 262162, 16, 65536, 262163, 16, 65538, 262164, 17, 65540, 393213, 17, 65540, 393214, 16, 65536, 393215, 16, 65538, 327680, 17, 65540, 327681, 16, 65536, 327682, 16, 65537, 327683, 16, 65537, 327684, 16, 65537, 327685, 16, 65537, 327686, 16, 65537, 327687, 16, 65537, 327688, 16, 65537, 327689, 16, 65537, 327690, 16, 65537, 327691, 16, 65537, 327692, 16, 65537, 327693, 16, 65537, 327694, 16, 65537, 327695, 16, 65537, 327696, 16, 65538, 327697, 17, 65540, 327698, 16, 65536, 327699, 16, 65538, 327700, 17, 65540, 458749, 17, 65540, 458750, 16, 65536, 458751, 16, 65538, 393216, 17, 65540, 393217, 16, 65536, 393218, 16, 65537, 393219, 16, 65537, 393220, 16, 65537, 393221, 16, 65537, 393222, 16, 65537, 393223, 16, 65537, 393224, 16, 65537, 393225, 16, 65537, 393226, 16, 65537, 393227, 16, 65537, 393228, 16, 65537, 393229, 16, 65537, 393230, 16, 65537, 393231, 16, 65537, 393232, 16, 65538, 393233, 17, 65540, 393234, 16, 65536, 393235, 16, 65538, 393236, 17, 65540, 524285, 17, 65540, 524286, 16, 131072, 524287, 16, 131074, 458752, 17, 65540, 458753, 16, 131072, 458754, 16, 131073, 458755, 16, 131073, 458756, 16, 131073, 458757, 16, 131073, 458758, 16, 131073, 458759, 16, 131073, 458760, 16, 131073, 458761, 16, 131073, 458762, 16, 131073, 458763, 16, 131073, 458764, 16, 131073, 458765, 16, 131073, 458766, 16, 131073, 458767, 16, 131073, 458768, 16, 131074, 458769, 17, 65540, 458770, 16, 131072, 458771, 16, 131074, 458772, 17, 65540, 589821, 17, 262159, 589822, 17, 262145, 589823, 17, 262145, 524288, 17, 65549, 524289, 17, 1, 524290, 17, 1, 524291, 17, 1, 524292, 17, 1, 524293, 17, 1, 524294, 17, 1, 524295, 17, 1, 524296, 536870929, 1, 524297, 536870929, 1, 524298, 536870929, 1, 524299, 536870929, 1, 524300, 17, 1, 524301, 17, 1, 524302, 17, 1, 524303, 17, 1, 524304, 17, 1, 524305, 17, 65548, 524306, 17, 262145, 524307, 17, 262145, 524308, 17, 262160, 589824, 17, 131072, 589825, 17, 131073, 589826, 17, 131073, 589827, 17, 131073, 589828, 17, 131073, 589829, 17, 131073, 589830, 17, 131073, 589831, 17, 131073, 589832, 17, 131073, 589833, 17, 131073, 589834, 17, 131073, 589835, 17, 131073, 589836, 17, 131073, 589837, 17, 131073, 589838, 17, 131073, 589839, 17, 131073, 589840, 17, 131073, 589841, 17, 131074 )
+
+[node name="Randu" type="Control" parent="."]
+margin_left = 288.0
+margin_top = 144.0
+margin_right = 288.0
+margin_bottom = 144.0
+
+[node name="Randu" type="Label" parent="Randu"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 118.0
+margin_top = 91.0
+margin_right = 247.0
+margin_bottom = 123.0
+custom_fonts/font = SubResource( 4 )
+text = "RanduStudios"
+align = 1
+
+[node name="StartExit" type="VBoxContainer" parent="."]
+margin_left = 190.0
+margin_top = 67.0
+margin_right = 385.0
+margin_bottom = 221.0
+custom_constants/separation = 20
+
+[node name="Jumper" type="Label" parent="StartExit"]
+margin_right = 195.0
+margin_bottom = 50.0
+custom_colors/font_color = Color( 0.0431373, 0.996078, 0.482353, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Jumper"
+align = 1
+
+[node name="Label" type="Label" parent="StartExit"]
+margin_top = 70.0
+margin_right = 195.0
+margin_bottom = 102.0
+custom_fonts/font = SubResource( 3 )
+text = "Start"
+align = 1
+
+[node name="Start" type="TouchScreenButton" parent="StartExit/Label"]
+position = Vector2( 53, 0 )
+scale = Vector2( 1.28, 0.85 )
+shape = SubResource( 2 )
+shape_visible = false
+
+[node name="Label2" type="Label" parent="StartExit"]
+margin_top = 122.0
+margin_right = 195.0
+margin_bottom = 154.0
+custom_fonts/font = SubResource( 3 )
+text = "Exit"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Exit" type="TouchScreenButton" parent="StartExit/Label2"]
+position = Vector2( 61, -1 )
+scale = Vector2( 1.03, 0.84 )
+shape = SubResource( 2 )
+shape_visible = false
+
+[node name="backgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -15.0
+
+[connection signal="pressed" from="StartExit/Label/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="StartExit/Label2/Exit" to="." method="_on_Exit_pressed"]
